@@ -1,0 +1,236 @@
+--> Package nmap not installed. Try installing...
+sudo: apt-get: command not found
+--> Package libboost-all-dev not installed. Try installing...
+sudo: apt-get: command not found
+--> Package curl-devel not installed. Try installing...
+sudo: apt-get: command not found
+g++ -std=c++11  -DUSE_BOOST -DRESET_CONFIG -o ./ipc ./src/curlPost.cpp ./src/Voice.cpp ./src/consoleMain.cpp ./src/playback.cpp ./src/tool.cpp ./src/Config.cpp ./src/jsonAPI.cpp ./src/ipc.cpp ./src/CapPicture.cpp ./src/Alarm.cpp ./src/GetStream.cpp ./src/ConfigParams.cpp face_recog/age_gender_classify.cpp face_recog/face_recognition.cpp face_recog/tensor_util.cpp   -I./ -I./include -I/usr/local/include/tf -I/usr/local/include/tf/bazel-genfiles -I/root/Documents/tf_jiang/tensorflow-master/bazel-tensorflow-master/external/nsync/public -I/home/tony/work/eigen/eigen -L/usr/local/lib/libtensorflow_cc  -L./lib -lhcnetsdk -L./lib/HCNetSDKCom -lhpr -lHCCore -lX11 `pkg-config --cflags --libs opencv protobuf` -pthread  -L/usr/lib/x86_64-linux-gnu -lboost_regex -ltensorflow_cc -ltensorflow_framework  -lcurl -DENABLE_JSON_POST -DIPC
+./src/Voice.cpp: In function ‘int Demo_VoiceTrans()’:
+./src/Voice.cpp:57:83: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     lUserID = NET_DVR_Login("172.4.4.221", 8000, "admin", "12345", &struDeviceInfo);
+                                                                                   ^
+./src/Voice.cpp:57:83: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+./src/Voice.cpp:57:83: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+./src/Voice.cpp:71:79: warning: passing NULL to non-pointer argument 3 of ‘LONG NET_DVR_StartVoiceCom_MR(LONG, void (*)(LONG, char*, DWORD, BYTE, DWORD), DWORD)’ [-Wconversion-null]
+     lVoiceHanle = NET_DVR_StartVoiceCom_MR(lUserID, fdwVoiceDataCallBack, NULL);
+                                                                               ^
+./src/playback.cpp: In function ‘int Demo_PlayBackByName()’:
+./src/playback.cpp:120:83: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     lUserID = NET_DVR_Login("172.9.204.5", 8000, "admin", "12345", &struDeviceInfo);
+                                                                                   ^
+./src/playback.cpp:120:83: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+./src/playback.cpp:120:83: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+./src/playback.cpp:136:93: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         LONG lFindPicHandle = NET_DVR_PlayBackByName(lUserID, "ch01_02010100141000000", hWnd);
+                                                                                             ^
+./src/playback.cpp: In function ‘int Demo_GetFileByTime()’:
+./src/playback.cpp:249:83: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     lUserID = NET_DVR_Login("172.4.4.190", 8000, "admin", "12345", &struDeviceInfo);
+                                                                                   ^
+./src/playback.cpp:249:83: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+./src/playback.cpp:249:83: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+./src/playback.cpp:276:98: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         hPlayback = NET_DVR_GetFileByTime(lUserID, 1, &struStartTime, &struStopTime, "./test.mp4");
+                                                                                                  ^
+./src/tool.cpp: In function ‘int Demo_DVRIPByResolveSvr()’:
+./src/tool.cpp:8:21: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  char *pDevSerial = "DS-9016HF-ST1620110524BBRR403574653WCVU";
+                     ^
+./src/tool.cpp:17:137: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  if (NET_DVR_GetDVRIPByResolveSvr_EX("172.9.6.91", 7071, (BYTE *)pDevName, iDevNameLen, (BYTE *)pDevSerial, iDevSerialLen, strIP, &sPort))
+                                                                                                                                         ^
+./src/CapPicture.cpp: In function ‘int Demo_Capture()’:
+./src/CapPicture.cpp:29:93: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     lUserID = NET_DVR_Login_V30("192.168.1.104", 8000, "admin", "Aim@12345", &struDeviceInfo);
+                                                                                             ^
+./src/CapPicture.cpp:29:93: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+./src/CapPicture.cpp:29:93: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+./src/CapPicture.cpp:62:102: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     iRet = NET_DVR_CaptureJPEGPicture(lUserID, struDeviceInfo.byStartChan, &strPicPara, "./ssss.jpeg");
+                                                                                                      ^
+./src/Alarm.cpp: In function ‘int Demo_AlarmListen()’:
+./src/Alarm.cpp:84:78: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  int iHandle = NET_DVR_StartListen_V30("0.0.0.0", 7200, MessageCallback, NULL);
+                                                                              ^
+./src/Alarm.cpp: In function ‘int Demo_AlarmFortify()’:
+./src/Alarm.cpp:109:83: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  lUserID = NET_DVR_Login_V30("172.9.6.20", 8000, "admin", "12345", &struDeviceInfo);
+                                                                                   ^
+./src/Alarm.cpp:109:83: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+./src/Alarm.cpp:109:83: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+./src/GetStream.cpp: In function ‘int Demo_GetStream()’:
+./src/GetStream.cpp:54:84: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     lUserID = NET_DVR_Login("172.2.87.106", 8000, "admin", "12345", &struDeviceInfo);
+                                                                                    ^
+./src/GetStream.cpp:54:84: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+./src/GetStream.cpp:54:84: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+./src/ConfigParams.cpp: In function ‘int Demo_CompressParams()’:
+./src/ConfigParams.cpp:69:91: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     lUserID = NET_DVR_Login_V30(DEMO_DVRCONFIG_IP, 8000, "admin", "12345", &struDeviceInfo);
+                                                                                           ^
+./src/ConfigParams.cpp:69:91: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+./src/ConfigParams.cpp:69:91: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+#g++ -std=c++11  -DUSE_BOOST  -o ./ipc ./src/curlPost.cpp ./src/Voice.cpp ./src/consoleMain.cpp ./src/playback.cpp ./src/tool.cpp ./src/Config.cpp ./src/jsonAPI.cpp ./src/ipc.cpp ./src/CapPicture.cpp ./src/Alarm.cpp ./src/GetStream.cpp ./src/ConfigParams.cpp face_recog/age_gender_classify.cpp face_recog/face_recognition.cpp face_recog/tensor_util.cpp   -I./ -I./include -I/usr/local/include/tf -I/usr/local/include/tf/bazel-genfiles -I/root/Documents/tf_jiang/tensorflow-master/bazel-tensorflow-master/external/nsync/public -I/home/tony/work/eigen/eigen -L/usr/local/lib/libtensorflow_cc  -L./lib -lhcnetsdk -L./lib/HCNetSDKCom -lhpr -lHCCore -lX11 `pkg-config --cflags --libs opencv protobuf` -pthread  -L/usr/lib/x86_64-linux-gnu -lboost_regex -ltensorflow_cc -ltensorflow_framework  -lcurl -DENABLE_JSON_POST -DIPC
+found IPDomain entry
+IPDomain from json: :192.168.0.0/24
+parse result:
+mac:b4:a3:82:5e:5f:15  vendor:hc  user:admin  passwd:Aim@12345
+mac:4c:bd:8f:c6:30:1f  vendor:hc  user:admin  passwd:Aim@12345
+mac:4c:bd:8f:3f:19:db  vendor:hc  user:admin  passwd:Aim@12345
+mac:b4:a3:82:66:8b:e6  vendor:hc  user:admin  passwd:Aim@12345
+mac:b4:a3:82:6a:80:f0  vendor:hc  user:admin  passwd:Aim@12345
+mac:14:a7:8b:8f:d8:37  vendor:dh  user:admin  passwd:Aim@12345
+mac:64:db:8b:6a:6d:3e  vendor:hc  user:admin  passwd:Aim@12345
+mac:64:db:8b:28:ff:73  vendor:hc  user:admin  passwd:Aim@12345
+mac:64:db:8b:1f:57:6e  vendor:hc  user:admin  passwd:Aim@12345
+mac:64:db:8b:1f:58:42  vendor:hc  user:admin  passwd:Aim@12345
+mac:64:db:8b:28:ff:a9  vendor:hc  user:admin  passwd:Aim@12345
+mac:64:db:8b:1f:58:04  vendor:hc  user:admin  passwd:Aim@12345
+mac:64:db:8b:1f:58:74  vendor:hc  user:admin  passwd:Aim@12345
+mac:64:db:8b:28:ff:8e  vendor:hc  user:admin  passwd:Aim@12345
+mac:64:db:8b:28:ff:b4  vendor:hc  user:admin  passwd:Aim@12345
+mac:64:db:8b:1f:58:7d  vendor:hc  user:admin  passwd:Aim@12345
+mac:64:db:8b:28:ff:bb  vendor:hc  user:admin  passwd:Aim@12345
+mac:64:db:8b:28:ff:6d  vendor:hc  user:admin  passwd:Aim@12345
+mac:64:db:8b:6a:6d:92  vendor:hc  user:admin  passwd:Aim@12345
+mac:64:db:8b:28:ff:7f  vendor:hc  user:admin  passwd:Aim@12345
+mac:64:db:8b:28:ff:82  vendor:hc  user:admin  passwd:Aim@12345
+mac:64:db:8b:6a:6d:58  vendor:hc  user:admin  passwd:Aim@12345
+mac:64:db:8b:6a:6d:69  vendor:hc  user:admin  passwd:Aim@12345
+mac:64:db:8b:6a:6d:a9  vendor:hc  user:admin  passwd:Aim@12345
+mac:64:db:8b:28:ff:85  vendor:hc  user:admin  passwd:Aim@12345
+mac:64:db:8b:28:ff:8d  vendor:hc  user:admin  passwd:Aim@12345
+mac:64:db:8b:1f:58:54  vendor:hc  user:admin  passwd:Aim@12345
+mac:64:db:8b:6a:6d:5b  vendor:hc  user:admin  passwd:Aim@12345
+mac:64:db:8b:1f:57:6b  vendor:hc  user:admin  passwd:Aim@12345
+mac:4c:bd:8f:3f:19:98  vendor:hc  user:admin  passwd:Aim@12345
+mac:64:db:8b:1f:58:01  vendor:hc  user:admin  passwd:Aim@12345
+mac:64:db:8b:28:ff:b2  vendor:hc  user:admin  passwd:Aim@12345
+mac:64:db:8b:28:ff:72  vendor:hc  user:admin  passwd:Aim@12345
+mac:4c:bd:8f:c6:30:1f  vendor:hc  user:admin  passwd:Aim@12345
+mac:14:a7:8b:8f:d8:37  vendor:dh  user:admin  passwd:Aim@12345
+mac:4c:bd:8f:3f:1a:16  vendor:hc  user:admin  passwd:Aim@12345
+mac:64:db:8b:66:b0:aa  vendor:hc  user:admin  passwd:Aim@12345
+mac:64:db:8b:66:b0:e9  vendor:hc  user:admin  passwd:Aim@12345
+mac:64:db:8b:66:af:b4  vendor:hc  user:admin  passwd:Aim@12345
+mac:64:db:8b:66:b0:02  vendor:hc  user:admin  passwd:Aim@12345
+
+Start to scan local device ip-mac tables.....
+Try search arp result: 192.168.0.104 => 64:DB:8B:66:B0:02
+Match: ip=192.168.0.104 mac=64:db:8b:66:b0:02
+Try search arp result: 192.168.0.111 => F4:8B:32:7B:59:F7
+Try search arp result: 192.168.0.1 => 48:7D:2E:32:DF:ED
+Try search arp result: 192.168.0.233 => 74:EA:C8:F2:72:E0
+Try search arp result: edgeserver
+Scan Done.
+
+Found ip - map mapping:
+    192.168.0.104 => 64:db:8b:66:b0:02 => hc => admin => Aim@12345
+
+Config ctor
+HCNetSDK V5.2.7.4
+176
+178
+181
+----------------------------------------show main before update-----------------------------------
+*********major config**********
+byStreamType= 	0
+byResolution= 	19
+byBitrateType= 	0
+byPicQuality= 	3
+dwVideoBitrate= 	25
+dwVideoFrameRate= 	10
+wIntervalFrameI= 	20
+byVideoEncType= 	1
+byVideoEncComplexity= 	1
+byEnableSvc= 	0
+bySmartCodec= 	0
+*********minor config**********
+byIntervalBPFrame= 	2
+byAudioEncType= 	2
+byFormatType= 	0
+byStreamSmooth= 	50
+byAudioBitRate= 	4
+byAudioSamplingRate= 	2
+byres= 	0
+wAverageVideoBitrate= 	23
+----------------------------------------update main & sub-----------------------------------
+----------------------------------------set main & sub-----------------------------------
+update config Failed
+config error, 11
+----------------------------------------show main after update-----------------------------------
+*********major config**********
+byStreamType= 	0
+byResolution= 	19
+byBitrateType= 	0
+byPicQuality= 	3
+dwVideoBitrate= 	25
+dwVideoFrameRate= 	10
+wIntervalFrameI= 	20
+byVideoEncType= 	1
+byVideoEncComplexity= 	1
+byEnableSvc= 	0
+bySmartCodec= 	0
+*********minor config**********
+byIntervalBPFrame= 	2
+byAudioEncType= 	2
+byFormatType= 	0
+byStreamSmooth= 	50
+byAudioBitRate= 	4
+byAudioSamplingRate= 	2
+byres= 	0
+wAverageVideoBitrate= 	23
+~Config
+Launch HaiKang IPC
+Invalid UE golomb code
+Invalid UE golomb code
+Invalid UE golomb code
+---------------------
+Invalid UE golomb code
+---------------------
+##launching process thread
+Invalid UE golomb code
+---------------------
+---------------------
+---------------------
+---------------------
+---------------------
+---------------------
+---------------------
+---------------------
+---------------------
+have face 0 
+1522474537312   time 
+---------------------
+have face 0 
+1522474537391   time 
+---------------------
+##launching process thread
+---------------------
+have face 0 
+1522474537544   time 
+have face 0 
+1522474537623   time 
+---------------------
+##launching process thread
+---------------------
+have face 0 
+1522474537741   time 
+have face 0 
+1522474537821   time 
+---------------------
+##launching process thread
+---------------------
+have face 0 
+1522474537965   time 
+---------------------
+have face 0 
+1522474538044   time 
+---------------------
+##launching process thread
+have face 0 
+1522474538232   time 
+---------------------
+---------------------
+have face 0 
+1522474538311   time 
